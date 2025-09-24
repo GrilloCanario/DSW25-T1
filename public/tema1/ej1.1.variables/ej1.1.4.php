@@ -12,8 +12,10 @@
     $cadena = "PHP";
     $booleano = true;
 
-    echo "<ul><li>gettype($entero)</li></ul>";
-    echo "$entero";
+    echo "<ul><li>Valor: $entero , Tipo: ".gettype($entero)."</li>";
+    echo "<li>Valor: $flotante , Tipo: ".gettype($flotante)."</li>";
+    echo "<li>Valor: $cadena , Tipo: ".gettype($cadena)."</li>";
+    echo "<li>Valor: $booleano , Tipo: ".gettype($booleano)."</li></ul>";
     ?>
 </body>
 </html>
