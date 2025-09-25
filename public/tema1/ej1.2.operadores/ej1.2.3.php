@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+    $numero = 10;
     
+    ?>
 </body>
 </html>
