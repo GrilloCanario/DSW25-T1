@@ -20,7 +20,18 @@
     }
     echo "</ol></pre></div>";
     //- Añadir elemento al final del array y visualizarlo
+    echo "<div>Añadiendo el número 60 al final:<pre>";
+    $numeros[] = 60;
+    print_r($numeros);
+    echo "</pre></div>";
     //- Modificar elementos del array con operación aritmetica
+    echo "<div>Dividiendo cada elemento entre 5:<pre>";
+    $countNumeros = count($numeros);
+    for ($i = 0; $i < $countNumeros; $i++) {
+        $numeros[$i] /= 5;
+    }
+    print_r($numeros);
+    echo "</pre></div>";
     ?>
 </body>
 </html>

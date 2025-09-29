@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Página de envio de datos con GET</h1>
+    <form action="procesarGET.php" method="get">
+        <p>
+            <label for="">Nombre: </label>
+            <input type="text" name="nombre" id="name">
+        </p>
+        <p>
+            <label for="age">Edad:</label>
+            <input type="number" name="edad" id="age">
+        </p>
+        <p>
+            <label for="">Elige el módulo que más te guste</label>
+            <select name="modulo" id="">
+                <option value="DSW">Lado Servidor</option>
+                <option value="DEW">Lado Cliente</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>
