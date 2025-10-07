@@ -194,7 +194,6 @@
 
     //! --------------------------------------------------------------------------------------------------------------------------------------
     //- Funciones básicas
-    <?php
     // strlen(): longitud de cadena
     echo strlen("Hola PHP"); // 8
 
@@ -206,10 +205,8 @@
 
     // rtrim(): elimina espacios a la derecha
     echo rtrim("Hola   "); // "Hola"
-    ?>
 
     //- Conversión de mayúsculas/minúsculas
-    <?php
     // strtoupper(): todo a mayúsculas
     echo strtoupper("php es genial"); // "PHP ES GENIAL"
 
@@ -221,10 +218,8 @@
 
     // ucwords(): primera letra de cada palabra
     echo ucwords("hola mundo desde php"); // "Hola Mundo Desde Php"
-    ?>
 
     //- Reemplazo y manipulación
-    <?php
     // str_replace(): reemplaza texto
     echo str_replace("Java", "PHP", "Me gusta Java"); // "Me gusta PHP"
 
@@ -242,10 +237,8 @@
 
     // substr_replace(): reemplaza una parte del texto
     echo substr_replace("Hola Mundo", "PHP", 5, 5); // "Hola PHP"
-    ?>
 
     //- Búsqueda
-    <?php
     // strpos(): posición de la primera aparición
     echo strpos("Aprender PHP es fácil", "PHP"); // 9
 
@@ -260,10 +253,8 @@
 
     // str_ends_with(): termina con... (PHP 8+)
     var_dump(str_ends_with("archivo.txt", ".txt")); // true
-    ?>
 
     //- Dividir y unir cadenas
-    <?php
     // explode(): separa una cadena en array
     $colores = explode(",", "rojo,verde,azul");
     print_r($colores); // ['rojo', 'verde', 'azul']
@@ -273,10 +264,8 @@
 
     // join(): alias de implode()
     echo join(" / ", $colores); // "rojo / verde / azul"
-    ?>
 
     //- Comparación y análisis
-    <?php
     // strcmp(): compara (sensible a mayúsculas)
     echo strcmp("Hola", "hola"); // ≠ 0 → diferente
 
@@ -291,10 +280,8 @@
     // similar_text(): porcentaje de similitud
     similar_text("casa", "caso", $porcentaje);
     echo $porcentaje; // 75
-    ?>
 
     //- Codificación y seguridad
-    <?php
     // htmlspecialchars(): convierte caracteres especiales
     echo htmlspecialchars("<b>Hola</b>"); // "&lt;b&gt;Hola&lt;/b&gt;"
 
@@ -306,7 +293,7 @@
 
     // nl2br(): convierte saltos de línea a <br>
     echo nl2br("Hola\nMundo"); // "Hola<br />Mundo"
-    ?>
+
 
     //! ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -424,7 +411,6 @@
     } else {
         echo "Correo inválido";
     }
-?><?php
         //- Tipos de Comentarios
 
         // de una linea
@@ -695,10 +681,10 @@
 
     //? Definir una función
 
-    function suma($a, $b) {
+    function sumar($a, $b) {
         return $a + $b;
     }
-    echo suma(2, 3);  //* Imprime 5
+    echo sumar(2, 3);  //* Imprime 5
 
     //? Funciones anónimas y callback
 
