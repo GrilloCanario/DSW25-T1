@@ -9,14 +9,34 @@
     <?php
     $numerosMultidimensional = [];
     $count = 1;
-    echo "<table><tr><caption><strong>Tabla HTML:</strong></caption</tr></tbody>";
-    for($i = 0; $i < 16 ; $i++){
-        for($j = 0; $j < 10; $j++){
-            print_r("<pre>" . $numerosMultidimensional[$i][$j] = $count . "</pre>");
+    for($i = 0; $i < 16 ; $i++){        //* filas   (1º siempre van las filas)
+        for($j = 0; $j < 10; $j++){     //* columnas
+            $numerosMultidimensional[$i][$j] = $count;
             $count++;
         }
     }
-    echo "</tbody></table>";
+    echo "<div>";
+    echo "<h3>Array multidimensional contruido:</h3>";
+    echo "<pre>";
+    print_r($numerosMultidimensional);
+    echo "</pre>";
+    echo "</div>";
+
+    echo "<div>";
+    echo "<h3>Tabla HTML:</h3>";
+    echo "<table border='1' cellpadding='5' cellspacing='0'>";
+    echo "<tbody>";
+    
+    for ($i = 0; $i < 16 ; $i++) {
+        echo "<tr>";
+        for ($j = 0; $j < 10; $j++){
+            echo "<td>" . $numerosMultidimensional[$i][$j] . "</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</tbody>";
+    echo "</table>";
+    echo "</div>";
     ?>
 </body>
 </html>

@@ -8,7 +8,6 @@
 <body>
     <?php
     $numero = 10;
-<<<<<<< HEAD
     $numero += 5;
     echo '<p class= "resultado>' . $numero . '</p>';
     $numero *= 2;
@@ -17,9 +16,6 @@
     echo '<p class= "resultado>' . $numero . '</p>';
     $numero /= 4;
     echo '<p class= "resultado>' . $numero . '</p>';
-=======
-    
->>>>>>> ab4ec02 (1)
     ?>
 </body>
 </html>
