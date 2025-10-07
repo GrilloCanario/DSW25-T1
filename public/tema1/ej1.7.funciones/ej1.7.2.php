@@ -7,15 +7,12 @@
 </head>
 <body>
     <?php
-    function saludar($nombre){
-        if(empty($nombre)){
-            printf("<h2>Hola, Invitado!</h2>");
-        } else {
-            printf("<h2>Hola, %s", $nombre);
-        }
+    function invertirCadena($texto){
+        return strrev($texto);
     }
-    saludar("");
-    saludar("Pedro");
+    $frase = "hola";
+    printf("<p>La cadena original es: %s</p>",$frase);
+    printf("<p>La cadena invertida es: %s</p>",invertirCadena($frase));
     ?>
 </body>
 </html>

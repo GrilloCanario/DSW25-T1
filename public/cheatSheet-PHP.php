@@ -192,6 +192,124 @@
     explode(" ",$texto);            //* Convierte String en Array
     str_replace("Mundo", "Universo", $texto);       //* Reemplaza 
 
+    //! --------------------------------------------------------------------------------------------------------------------------------------
+    //- Funciones básicas
+    <?php
+    // strlen(): longitud de cadena
+    echo strlen("Hola PHP"); // 8
+
+    // trim(): elimina espacios al inicio y final
+    echo trim("  Hola PHP  "); // "Hola PHP"
+
+    // ltrim(): elimina espacios a la izquierda
+    echo ltrim("   Hola"); // "Hola"
+
+    // rtrim(): elimina espacios a la derecha
+    echo rtrim("Hola   "); // "Hola"
+    ?>
+
+    //- Conversión de mayúsculas/minúsculas
+    <?php
+    // strtoupper(): todo a mayúsculas
+    echo strtoupper("php es genial"); // "PHP ES GENIAL"
+
+    // strtolower(): todo a minúsculas
+    echo strtolower("PHP ES GENIAL"); // "php es genial"
+
+    // ucfirst(): primera letra en mayúscula
+    echo ucfirst("hola mundo"); // "Hola mundo"
+
+    // ucwords(): primera letra de cada palabra
+    echo ucwords("hola mundo desde php"); // "Hola Mundo Desde Php"
+    ?>
+
+    //- Reemplazo y manipulación
+    <?php
+    // str_replace(): reemplaza texto
+    echo str_replace("Java", "PHP", "Me gusta Java"); // "Me gusta PHP"
+
+    // substr(): extrae parte del texto
+    echo substr("Programar en PHP", 0, 9); // "Programar"
+
+    // strrev(): invierte el texto
+    echo strrev("PHP"); // "PHP" (igual), "Hola" → "aloH"
+
+    // str_repeat(): repite texto
+    echo str_repeat("Ha", 3); // "HaHaHa"
+
+    // str_pad(): rellena texto
+    echo str_pad("5", 3, "0", STR_PAD_LEFT); // "005"
+
+    // substr_replace(): reemplaza una parte del texto
+    echo substr_replace("Hola Mundo", "PHP", 5, 5); // "Hola PHP"
+    ?>
+
+    //- Búsqueda
+    <?php
+    // strpos(): posición de la primera aparición
+    echo strpos("Aprender PHP es fácil", "PHP"); // 9
+
+    // strrpos(): posición de la última aparición
+    echo strrpos("PHP y más PHP", "PHP"); // 8
+
+    // str_contains(): verifica si contiene (PHP 8+)
+    var_dump(str_contains("Hola PHP", "PHP")); // true
+
+    // str_starts_with(): empieza con... (PHP 8+)
+    var_dump(str_starts_with("Hola Mundo", "Hola")); // true
+
+    // str_ends_with(): termina con... (PHP 8+)
+    var_dump(str_ends_with("archivo.txt", ".txt")); // true
+    ?>
+
+    //- Dividir y unir cadenas
+    <?php
+    // explode(): separa una cadena en array
+    $colores = explode(",", "rojo,verde,azul");
+    print_r($colores); // ['rojo', 'verde', 'azul']
+
+    // implode(): une array en texto
+    echo implode(" - ", $colores); // "rojo - verde - azul"
+
+    // join(): alias de implode()
+    echo join(" / ", $colores); // "rojo / verde / azul"
+    ?>
+
+    //- Comparación y análisis
+    <?php
+    // strcmp(): compara (sensible a mayúsculas)
+    echo strcmp("Hola", "hola"); // ≠ 0 → diferente
+
+    // strcasecmp(): compara (no sensible a mayúsculas)
+    echo strcasecmp("Hola", "hola"); // 0 → igual
+
+    // strnatcmp(): comparación natural
+    $val1 = "img2";
+    $val2 = "img10";
+    echo strnatcmp($val1, $val2); // negativo (img2 < img10)
+
+    // similar_text(): porcentaje de similitud
+    similar_text("casa", "caso", $porcentaje);
+    echo $porcentaje; // 75
+    ?>
+
+    //- Codificación y seguridad
+    <?php
+    // htmlspecialchars(): convierte caracteres especiales
+    echo htmlspecialchars("<b>Hola</b>"); // "&lt;b&gt;Hola&lt;/b&gt;"
+
+    // addslashes(): escapa comillas
+    echo addslashes("O'Reilly"); // "O\'Reilly"
+
+    // strip_tags(): elimina etiquetas HTML
+    echo strip_tags("<p>Hola <b>Mundo</b></p>"); // "Hola Mundo"
+
+    // nl2br(): convierte saltos de línea a <br>
+    echo nl2br("Hola\nMundo"); // "Hola<br />Mundo"
+    ?>
+
+    //! ----------------------------------------------------------------------------------------------------------------------------------------
+
     //? Formateo de Cadenas con printf() y sprintf()
     
     //! printf() ---> imprime una cadena formateada directamente en salida
